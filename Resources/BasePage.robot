@@ -16,7 +16,7 @@ Variables                properties.py
 
 ***Variables***
 ${BASEURL}                          https://trade-sticker-dev.vercel.app/
-${BROWSER}                          ${browserName}  # locators.pt file
+${BROWSER}                          ${browserName}  # properties.py file
 @{LIST_OF_BROSERS}                  chrome    firefox    edge
 ${LONGTIMEOUT}                      60
 ${TIMEOUT}                          30
