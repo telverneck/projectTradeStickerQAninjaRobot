@@ -10,7 +10,7 @@ Resource                Pages/Common/ComponentsPage.robot
 Resource                Pages/LoginPage.robot
 Resource                Pages/DashboardPage.robot
 
-Variables            locators.py
+Variables                properties.py
 
 
 
@@ -45,7 +45,7 @@ Start Session and Login
     Start Session
     Login With                ${login}    ${password}
     Check DashBoardPage Page
-    
+
 Close Session
     Capture Page Screenshot
     Close Browser
