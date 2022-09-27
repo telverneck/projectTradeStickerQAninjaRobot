@@ -4,11 +4,13 @@ Library                 SeleniumLibrary
 Library                 FakerLibrary
 Library                 DateTime 
 Library                 String
+Library                 webdriverManager.py
 
 Resource                Pages/Common/ActionsPage.robot
 Resource                Pages/Common/ComponentsPage.robot
 Resource                Pages/LoginPage.robot
 Resource                Pages/DashboardPage.robot
+
 
 Variables                properties.py
 
@@ -24,6 +26,7 @@ ${BROWSER_WIDTH}                    1440
 ${BROWSER_HEIGHT}                   900
 ${FRAME}                            css:iframe#Simulator
 
+
 ${login}            ${loginEmailAccess}
 ${password}         ${passwordAccess}
 
@@ -33,7 +36,8 @@ ${password}         ${passwordAccess}
 
 ***Keywords***
 Start Session
-    Open Browser            about:blank     ${BROWSER}
+    ${driver_path}=    webdriverManager.Get Driver Path With Browser        ${BROWSER}
+    Open Browser            about:blank     ${BROWSER}    executable_path=${driver_path}
     Set Selenium Implicit Wait          ${TIMEOUT}
     Set window size                     ${BROWSER_WIDTH}    ${BROWSER_HEIGHT}
     Go To                   ${BASEURL}
