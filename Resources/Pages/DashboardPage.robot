@@ -17,6 +17,9 @@ Check DashBoardPage Page
     Wait Until Element Is Visible        ${searchBarInput}
     Wait Until Element Is Visible        ${searchButton}
 
+Click Back Button
+    Click Element    ${backButton}
+    
 Search for ticket
     [Arguments]    ${ticket}
     Input Text    ${searchBarInput}     ${ticket}
