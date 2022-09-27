@@ -13,9 +13,12 @@ ${password}         ${passwordAccess}
 Scenario1: Check Login Page
     [Documentation]    Test for Login Page
     [Tags]        login    smoke    full
-    
+
     Login With    ${login}    ${password}
     Check DashBoardPage Page
+    Click Back Button
+    Check Login Page
+
 
 
 
